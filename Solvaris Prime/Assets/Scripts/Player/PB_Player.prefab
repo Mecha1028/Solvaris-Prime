@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3127277241780782666}
   - component: {fileID: 8840584554769000307}
   - component: {fileID: 3755497413917636652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c1a70d7a90418d4ca7305cc474d9fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 8840584554769000307}
+  rb: {fileID: 0}
+  cam: {fileID: 0}
   moveSpeed: 5
 --- !u!1 &6493901318399732473
 GameObject:
