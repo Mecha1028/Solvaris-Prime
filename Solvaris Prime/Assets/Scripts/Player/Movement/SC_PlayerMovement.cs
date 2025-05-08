@@ -8,7 +8,7 @@ public class SC_PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Camera cam;
 
-    public float moveSpeed = 5.0f;
+    public float moveSpeed = 2.0f;
     public IA_PlayerControls playerControls;
 
     Vector2 moveDirection = Vector2.zero;
