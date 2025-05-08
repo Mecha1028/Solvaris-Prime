@@ -11,7 +11,7 @@ public class SC_PlayerShooting : MonoBehaviour
 
     public float bulletForce = 1f;
     private bool canShoot = true;
-    private float shootCooldown = 0.5f;
+    public float shootCooldown = 0.5f;
 
 
 
