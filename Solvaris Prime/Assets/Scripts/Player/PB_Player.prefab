@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 6633393896004545640}
   - component: {fileID: 4592885713758486921}
   - component: {fileID: 4733740415007226580}
-  - component: {fileID: 8446302630306041483}
+  - component: {fileID: 6506337739078838043}
   m_Layer: 0
   m_Name: PB_Player
   m_TagString: Untagged
@@ -354,7 +354,7 @@ MonoBehaviour:
   rb: {fileID: 4592885713758486921}
   cam: {fileID: 0}
   moveSpeed: 10
---- !u!114 &8446302630306041483
+--- !u!114 &6506337739078838043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,8 +367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShootPoint: {fileID: 8939683697706688942}
-  PB_Bullet: {fileID: 717580078614981795, guid: cfe74cd88dd153b4fac3aacb6faf21b8, type: 3}
-  bulletForce: 2
+  PB_Bullet: {fileID: 5701380497232717586, guid: 47b8b496ea869d147accc9588e22b3a7, type: 3}
+  bulletForce: 1
   shootCooldown: 0.5
 --- !u!1 &8824051772829369488
 GameObject:

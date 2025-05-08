@@ -13,8 +13,6 @@ public class SC_PlayerShooting : MonoBehaviour
     private bool canShoot = true;
     public float shootCooldown = 0.5f;
 
-
-
     public IA_PlayerControls playerControls;
     private InputAction fire;
 
@@ -46,9 +44,9 @@ public class SC_PlayerShooting : MonoBehaviour
     void Shoot()
     {
         GameObject bullet = Instantiate(PB_Bullet, ShootPoint.position, ShootPoint.rotation);
-        bullet.transform.localScale = new Vector2(3, 3);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(ShootPoint.up * bulletForce, ForceMode2D.Impulse);
+        bullet.transform.localScale = new Vector3(3, 3, 3);
+        //Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        //rb.AddForce(ShootPoint.up * bulletForce, ForceMode2D.Impulse);
 
     }
     IEnumerator ShootCooldown()
