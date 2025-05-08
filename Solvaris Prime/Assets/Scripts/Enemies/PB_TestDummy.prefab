@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5735938118547110793}
   - component: {fileID: 971460597199646436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PB_TestDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
