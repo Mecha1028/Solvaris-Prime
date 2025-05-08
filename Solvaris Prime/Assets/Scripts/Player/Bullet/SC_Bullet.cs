@@ -19,3 +19,6 @@ public class SC_Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 }
+
+
+

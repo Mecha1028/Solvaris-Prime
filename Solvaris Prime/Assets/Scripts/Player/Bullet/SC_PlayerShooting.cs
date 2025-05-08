@@ -46,6 +46,7 @@ public class SC_PlayerShooting : MonoBehaviour
     void Shoot()
     {
         GameObject bullet = Instantiate(PB_Bullet, ShootPoint.position, ShootPoint.rotation);
+        bullet.transform.localScale = new Vector2(3, 3);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(ShootPoint.up * bulletForce, ForceMode2D.Impulse);
 
