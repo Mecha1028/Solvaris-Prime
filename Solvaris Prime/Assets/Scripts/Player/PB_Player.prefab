@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4592885713758486921}
   cam: {fileID: 0}
-  moveSpeed: 10
+  moveSpeed: 4
 --- !u!114 &6506337739078838043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootPoint: {fileID: 8939683697706688942}
   PB_Bullet: {fileID: 5701380497232717586, guid: 47b8b496ea869d147accc9588e22b3a7, type: 3}
-  bulletForce: 1
+  bulletForce: 4
   shootCooldown: 0.5
 --- !u!1 &8824051772829369488
 GameObject:
