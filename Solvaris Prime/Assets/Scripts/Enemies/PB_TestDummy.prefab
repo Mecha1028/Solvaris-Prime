@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5735938118547110793}
   - component: {fileID: 971460597199646436}
   - component: {fileID: 8091419247975331740}
+  - component: {fileID: 1074759494773715786}
   m_Layer: 8
   m_Name: PB_TestDummy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,3 +113,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1074759494773715786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4586206643378926954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a161128507638594bb3504c556617bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8091419247975331740}
+  PB_Player: {fileID: 0}
+  Health: 10

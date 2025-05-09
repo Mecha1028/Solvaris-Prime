@@ -13,6 +13,12 @@ public class SC_Bullet : MonoBehaviour
         StartCoroutine(DestoryBullet());
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
+
+
     IEnumerator DestoryBullet()
     {
         yield return new WaitForSeconds(bulletLife);
