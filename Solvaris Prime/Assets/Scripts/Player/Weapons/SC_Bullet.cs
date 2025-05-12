@@ -10,21 +10,18 @@ public class SC_Bullet : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(DestoryBullet());
+        StartCoroutine(DestoryBullet(bulletLife));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        DestoryBullet();
     }
 
 
-    IEnumerator DestoryBullet()
+    IEnumerator DestoryBullet(float bulletLife = 0)
     {
         yield return new WaitForSeconds(bulletLife);
         Destroy(gameObject);
     }
 }
-
-
-
