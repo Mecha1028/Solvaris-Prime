@@ -9,7 +9,7 @@ public class SC_Bullet : MonoBehaviour
     public GameObject PB_Player;
     private void Start()
     {
-        PB_Player = GetComponent<SC_PlayerStats>();
+        //PB_Player = GetComponent<SC_PlayerStats>();
         StartCoroutine(DestoryBullet(3));
     }
 
