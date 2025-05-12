@@ -7,6 +7,8 @@ public class SC_TestDummy : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject PB_Player;
 
+    public float moveSpeed = 2f;
+
     Vector2 PlayerPosition = Vector2.zero;
 
     public float Health = 10f;
@@ -20,5 +22,6 @@ public class SC_TestDummy : MonoBehaviour
     {
         Vector2 LookDirection = PlayerPosition - rb.position;
         rb.rotation = Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg - 90f;
+        transform.position = Vector2.MoveTowards(transform.position, PlayerPosition, moveSpeed * Time.deltaTime);
     }
 }

@@ -6,11 +6,16 @@ using UnityEngine.InputSystem;
 
 public class SC_Bullet : MonoBehaviour
 {
-    public float bulletLife = 3f;
-
+    public GameObject PB_Player;
     private void Start()
     {
-        StartCoroutine(DestoryBullet(bulletLife));
+        PB_Player = GetComponent<SC_PlayerStats>();
+        StartCoroutine(DestoryBullet(3));
+    }
+
+    private void Update()
+    {
+        transform.position += transform.up * Time.deltaTime * 3;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
