@@ -15,7 +15,7 @@ public class SC_Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DestoryBullet();
+        StartCoroutine(DestoryBullet());
     }
 
 
