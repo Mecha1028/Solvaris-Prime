@@ -18,10 +18,29 @@ public class SC_TestDummy : MonoBehaviour
         PlayerPosition = PB_Player.transform.position;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rb.bodyType = RigidbodyType2D.Kinematic;
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        rb.bodyType = RigidbodyType2D.Dynamic;
+    }
+
+
+
     private void FixedUpdate()
     {
         Vector2 LookDirection = PlayerPosition - rb.position;
         rb.rotation = Mathf.Atan2(LookDirection.y, LookDirection.x) * Mathf.Rad2Deg - 90f;
-        transform.position = Vector2.MoveTowards(transform.position, PlayerPosition, moveSpeed * Time.deltaTime);
+        if (rb.bodyType != RigidbodyType2D.Kinematic)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, PlayerPosition, moveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
     }
 }
