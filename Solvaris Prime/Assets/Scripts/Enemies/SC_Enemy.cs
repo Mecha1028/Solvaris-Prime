@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SC_TestDummy : MonoBehaviour
+public class SC_Enemy : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject PB_Player;
@@ -28,8 +28,6 @@ public class SC_TestDummy : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
-
-
     private void FixedUpdate()
     {
         Vector2 LookDirection = PlayerPosition - rb.position;
@@ -41,6 +39,16 @@ public class SC_TestDummy : MonoBehaviour
         else
         {
             rb.velocity = Vector2.zero;
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Health -= damage;
+
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

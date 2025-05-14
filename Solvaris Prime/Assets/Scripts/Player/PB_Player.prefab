@@ -415,7 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootPoint: {fileID: 8939683697706688942}
   PB_Bullet: {fileID: 5701380497232717586, guid: 47b8b496ea869d147accc9588e22b3a7, type: 3}
-  bulletForce: 4
+  PB_Player: {fileID: 6493901318399732473}
   shootCooldown: 0.5
 --- !u!114 &5802452939986861731
 MonoBehaviour:
@@ -429,8 +429,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de65419471e0c0479153a82eaa6d115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
-  Damage: 5
+  maxHealth: 10
+  maxShield: 0
+  bulletDamage: 10
+  bulletSpeed: 3
+  bulletLife: 3
   PrimaryAbilityCooldown: 0
   SecondaryAbilityCooldown: 0
 --- !u!1 &8824051772829369488

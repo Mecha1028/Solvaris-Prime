@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,8 +9,8 @@ public class SC_PlayerShooting : MonoBehaviour
 {
     public Transform ShootPoint;
     public GameObject PB_Bullet;
+    public GameObject PB_Player;
 
-    private float bulletForce = 3f;
     private bool canShoot = true;
     public float shootCooldown = 0.5f;
 
@@ -44,13 +45,10 @@ public class SC_PlayerShooting : MonoBehaviour
     void Shoot()
     {
         GameObject bullet = Instantiate(PB_Bullet, ShootPoint.position, ShootPoint.rotation);
+        SC_Bullet bulletScript = bullet.GetComponent<SC_Bullet>();
         bullet.transform.localScale = new Vector3(3, 3, 3);
-
-        //GameObject bullet = Instantiate(PB_Bullet, ShootPoint.position, ShootPoint.rotation);
-        //bullet.transform.localScale = new Vector3(3, 3, 3);
-        //Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        //rb.AddForce(ShootPoint.up * bulletForce, ForceMode2D.Impulse);
-
+        bulletScript.bulletDamage = PB_Player.GetComponent<SC_PlayerStats>().bulletDamage;
+        
     }
     IEnumerator ShootCooldown()
     {

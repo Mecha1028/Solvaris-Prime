@@ -1,17 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class SC_Bullet : MonoBehaviour
 {
-    public GameObject PB_Player;
+    public float bulletDamage;
     private void Start()
     {
-        //PB_Player = GetComponent<SC_PlayerStats>();
         StartCoroutine(DestoryBullet(3));
     }
+
 
     private void Update()
     {
@@ -20,6 +21,14 @@ public class SC_Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            SC_Enemy enemy = collision.gameObject.GetComponent<SC_Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(bulletDamage);
+            }
+        }
         StartCoroutine(DestoryBullet());
     }
 
