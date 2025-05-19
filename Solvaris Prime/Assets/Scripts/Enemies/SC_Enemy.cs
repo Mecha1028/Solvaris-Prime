@@ -6,12 +6,13 @@ public class SC_Enemy : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject PB_Player;
-
-    public float moveSpeed = 2f;
-
     Vector2 PlayerPosition = Vector2.zero;
 
-    public float Health = 10f;
+
+    public float Health;
+    public bool IsMelee;
+    public float Damage;
+    public float moveSpeed;
 
     void Update()
     {
@@ -21,6 +22,15 @@ public class SC_Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         rb.bodyType = RigidbodyType2D.Kinematic;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (IsMelee)
+            {
+                SC_Player Player = PB_Player.GetComponent<SC_Player>();
+                Player.TakeDamage(Damage);
+                TakeDamage(Health);
+            }
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)

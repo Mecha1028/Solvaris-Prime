@@ -233,12 +233,13 @@ GameObject:
   - component: {fileID: 6633393896004545640}
   - component: {fileID: 4592885713758486921}
   - component: {fileID: 1957268494289439545}
+  - component: {fileID: 5802452939986861731}
+  - component: {fileID: 9203555915288860508}
   - component: {fileID: 4733740415007226580}
   - component: {fileID: 6506337739078838043}
-  - component: {fileID: 5802452939986861731}
   m_Layer: 6
   m_Name: PB_Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,6 +387,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.10922136, y: 0.26177013}
   m_EdgeRadius: 0
+--- !u!114 &5802452939986861731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493901318399732473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de65419471e0c0479153a82eaa6d115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  maxShield: 0
+  bulletDamage: 10
+  bulletSpeed: 3
+  bulletLife: 3
+  PrimaryAbilityCooldown: 0
+  SecondaryAbilityCooldown: 0
+--- !u!114 &9203555915288860508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493901318399732473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803403ab4b593334d8b14a75dece7997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PB_Player: {fileID: 0}
+  PB_HealthBar: {fileID: 0}
+  maxHealth: 0
+  currentHealth: 0
 --- !u!114 &4733740415007226580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,25 +453,6 @@ MonoBehaviour:
   PB_Bullet: {fileID: 5701380497232717586, guid: 47b8b496ea869d147accc9588e22b3a7, type: 3}
   PB_Player: {fileID: 6493901318399732473}
   shootCooldown: 0.5
---- !u!114 &5802452939986861731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6493901318399732473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de65419471e0c0479153a82eaa6d115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  maxShield: 0
-  bulletDamage: 10
-  bulletSpeed: 3
-  bulletLife: 3
-  PrimaryAbilityCooldown: 0
-  SecondaryAbilityCooldown: 0
 --- !u!1 &8824051772829369488
 GameObject:
   m_ObjectHideFlags: 0
