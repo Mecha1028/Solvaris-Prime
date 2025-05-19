@@ -7,8 +7,9 @@ public class SC_PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Camera cam;
+    public GameObject PB_Player;
 
-    public float moveSpeed = 2.0f;
+    private float moveSpeed;
     public IA_PlayerControls playerControls;
 
     Vector2 moveDirection = Vector2.zero;
@@ -18,6 +19,7 @@ public class SC_PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        moveSpeed = PB_Player.GetComponent<SC_PlayerStats>().moveSpeed;
         playerControls = new IA_PlayerControls();
     }
 

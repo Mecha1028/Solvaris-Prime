@@ -8,8 +8,8 @@ public class SC_Player : MonoBehaviour
     public GameObject PB_Player;
     public GameObject PB_HealthBar;
 
-    public float maxHealth;
-    public float currentHealth;
+    private float maxHealth;
+    private float currentHealth;
 
     private void Start()
     {

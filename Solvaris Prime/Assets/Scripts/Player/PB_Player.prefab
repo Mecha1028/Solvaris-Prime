@@ -401,6 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   maxShield: 0
+  moveSpeed: 4
   bulletDamage: 10
   bulletSpeed: 3
   bulletLife: 3
