@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4959607672111054781}
   - component: {fileID: 1074759494773715786}
   m_Layer: 8
-  m_Name: PB_Enemy
+  m_Name: PB_MeleeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1645d5e72d64b0248833dc084cf3c788, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44520d55306040046bda08a498b11ce5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -146,7 +146,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0005873069, y: 0.014739811}
+  m_Offset: {x: 0.00015110523, y: -0.015487693}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -157,7 +157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2077433, y: 0.3930261}
+  m_Size: {x: 0.16209672, y: 0.17122044}
   m_EdgeRadius: 0
 --- !u!114 &1074759494773715786
 MonoBehaviour:
@@ -174,3 +174,6 @@ MonoBehaviour:
   rb: {fileID: 8091419247975331740}
   PB_Player: {fileID: 0}
   Health: 10
+  IsMelee: 1
+  Damage: 5
+  moveSpeed: 4.25
