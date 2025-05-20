@@ -7,6 +7,7 @@ public class SC_Enemy : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject PB_Player;
+    public GameObject PB_EnemySpawnHandler;
     Vector2 PlayerPosition = Vector2.zero;
 
     public float Health;
@@ -72,8 +73,6 @@ public class SC_Enemy : MonoBehaviour
     private void DestroyEnemy()
     {
         int number = UnityEngine.Random.Range(0, 100);
-        Debug.Log(number);
-
         if (number < 100)
         {
             GameObject Powerup = Instantiate(PB_HealthPowerup);
@@ -81,6 +80,8 @@ public class SC_Enemy : MonoBehaviour
             SC_HealthPowerup script = Powerup.GetComponent<SC_HealthPowerup>();
             script.PB_Player = PB_Player;
         }
+        SC_SpawnEnemies SpawnEnemies = PB_EnemySpawnHandler.GetComponent<SC_SpawnEnemies>();
+        SpawnEnemies.KillCount++;
         Destroy(gameObject);
     }
 }

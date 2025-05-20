@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SC_SpawnEnemies : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int KillCount = 0;
+    public int KillsToGet = 20;
+    private float SpawnTimer;
+
+
+    private void Update()
     {
-        
+        if (KillCount < KillsToGet)
+        {
+            StartCoroutine(ShootCooldown());
+        }
+        else
+        {
+            Debug.Log("BOSS NOT ADDED");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnEnemy()
     {
-        
+
+    }
+
+
+
+    IEnumerator ShootCooldown()
+    {
+        yield return new WaitForSeconds(SpawnTimer);
+        SpawnEnemy();
     }
 }
