@@ -7,7 +7,6 @@ public class SC_Enemy : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject PB_Player;
-    public GameObject PB_EnemySpawnHandler;
     Vector2 PlayerPosition = Vector2.zero;
 
     public float Health;
@@ -17,10 +16,7 @@ public class SC_Enemy : MonoBehaviour
 
     private bool DidMelee;
 
-    public GameObject PB_DamagePowerup;
-    public GameObject PB_ExtraBulletPowerup;
-    public GameObject PB_HealthPowerup;
-    public GameObject PB_MoveSpeedPowerup;
+    public GameObject[] PowerUps;
 
     void Update()
     {
@@ -34,6 +30,7 @@ public class SC_Enemy : MonoBehaviour
         {
             if (IsMelee)
             {
+                DidMelee = true;
                 SC_Player Player = PB_Player.GetComponent<SC_Player>();
                 Player.TakeDamage(Damage);
                 TakeDamage(Health);
@@ -72,16 +69,16 @@ public class SC_Enemy : MonoBehaviour
 
     private void DestroyEnemy()
     {
-        int number = UnityEngine.Random.Range(0, 100);
-        if (number < 100)
+        if (!DidMelee)
         {
-            GameObject Powerup = Instantiate(PB_HealthPowerup);
-            Powerup.transform.position = rb.position;
-            SC_HealthPowerup script = Powerup.GetComponent<SC_HealthPowerup>();
-            script.PB_Player = PB_Player;
+            int number = UnityEngine.Random.Range(0, 100);
+            if (number < 100)
+            {
+                int Position = UnityEngine.Random.Range(0, 2);
+                GameObject Powerup = Instantiate(PowerUps[Position]);
+                Powerup.transform.position = rb.position;
+            }
         }
-        SC_SpawnEnemies SpawnEnemies = PB_EnemySpawnHandler.GetComponent<SC_SpawnEnemies>();
-        SpawnEnemies.KillCount++;
         Destroy(gameObject);
     }
 }

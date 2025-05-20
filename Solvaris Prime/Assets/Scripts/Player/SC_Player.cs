@@ -31,10 +31,4 @@ public class SC_Player : MonoBehaviour
             Debug.Log("Kill Player Not Implemented");
         }
     }
-
-    public void UpdateHealth(float currentHealth)
-    {
-        SC_HealthBar HealthBar = PB_HealthBar.GetComponent<SC_HealthBar>();
-        HealthBar.SetHealth(currentHealth);
-    }
 }

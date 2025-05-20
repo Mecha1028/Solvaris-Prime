@@ -172,8 +172,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8091419247975331740}
-  PB_Player: {fileID: 0}
-  Health: 10
-  IsMelee: 0
-  Damage: 2.5
+  PB_Player: {fileID: 6493901318399732473, guid: de1f31effae28dd4c86aaa0a57b1200c, type: 3}
+  Health: 15
+  IsMelee: 1
+  Damage: 5
   moveSpeed: 3.5
+  PowerUps:
+  - {fileID: 3804999879411655809, guid: d10490d1b88337649b8693880f705cc1, type: 3}
+  - {fileID: 2773524167334229768, guid: ee6d67b12faca1142a3c2712fb6b8cac, type: 3}
+  - {fileID: 8763614687847867115, guid: 997ac555248535e4f9f1423b36944def, type: 3}
