@@ -175,7 +175,7 @@ MonoBehaviour:
   PB_Player: {fileID: 6493901318399732473, guid: de1f31effae28dd4c86aaa0a57b1200c, type: 3}
   Health: 15
   IsMelee: 1
-  Damage: 5
+  Damage: 10
   moveSpeed: 3.5
   PowerUps:
   - {fileID: 3804999879411655809, guid: d10490d1b88337649b8693880f705cc1, type: 3}

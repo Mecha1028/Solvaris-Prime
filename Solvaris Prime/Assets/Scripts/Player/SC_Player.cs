@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SC_Player : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class SC_Player : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Kill Player Not Implemented");
+            SceneManager.LoadScene("SC_MainMenu"); 
         }
     }
 }

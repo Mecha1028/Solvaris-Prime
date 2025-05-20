@@ -74,7 +74,7 @@ public class SC_Enemy : MonoBehaviour
             int number = UnityEngine.Random.Range(0, 100);
             if (number < 100)
             {
-                int Position = UnityEngine.Random.Range(0, 2);
+                int Position = UnityEngine.Random.Range(0, 3);
                 GameObject Powerup = Instantiate(PowerUps[Position]);
                 Powerup.transform.position = rb.position;
             }
