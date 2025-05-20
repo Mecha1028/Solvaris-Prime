@@ -6,7 +6,7 @@ public class SC_HealthPowerup : MonoBehaviour
 {
     public GameObject PB_Player;
 
-    public float HealingDone;
+    private float HealingDone = 20;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,17 @@ public class SC_Enemy : MonoBehaviour
     public GameObject PB_Player;
     Vector2 PlayerPosition = Vector2.zero;
 
-
     public float Health;
     public bool IsMelee;
     public float Damage;
     public float moveSpeed;
+
+    private bool DidMelee;
+
+    public GameObject PB_DamagePowerup;
+    public GameObject PB_ExtraBulletPowerup;
+    public GameObject PB_HealthPowerup;
+    public GameObject PB_MoveSpeedPowerup;
 
     void Update()
     {
@@ -58,7 +65,22 @@ public class SC_Enemy : MonoBehaviour
 
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            DestroyEnemy();
         }
+    }
+
+    private void DestroyEnemy()
+    {
+        int number = UnityEngine.Random.Range(0, 100);
+        Debug.Log(number);
+
+        if (number < 100)
+        {
+            GameObject Powerup = Instantiate(PB_HealthPowerup);
+            Powerup.transform.position = rb.position;
+            SC_HealthPowerup script = Powerup.GetComponent<SC_HealthPowerup>();
+            script.PB_Player = PB_Player;
+        }
+        Destroy(gameObject);
     }
 }
