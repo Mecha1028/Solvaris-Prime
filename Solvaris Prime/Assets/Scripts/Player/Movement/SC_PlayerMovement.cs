@@ -19,7 +19,6 @@ public class SC_PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        moveSpeed = PB_Player.GetComponent<SC_PlayerStats>().moveSpeed;
         playerControls = new IA_PlayerControls();
     }
 
@@ -42,6 +41,7 @@ public class SC_PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        moveSpeed = PB_Player.GetComponent<SC_PlayerStats>().moveSpeed;
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
 
         Vector2 lookDirection = mousePosition - rb.position;

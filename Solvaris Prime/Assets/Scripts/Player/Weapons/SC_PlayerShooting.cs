@@ -19,14 +19,6 @@ public class SC_PlayerShooting : MonoBehaviour
     public IA_PlayerControls playerControls;
     private InputAction fire;
 
-
-    private void Start()
-    {
-        SC_PlayerStats PlayerStats = PB_Player.GetComponent<SC_PlayerStats>();
-        shootCooldown = PlayerStats.shootCooldown;
-        bulletAmount = PlayerStats.bulletAmount;
-    }
-
     private void Awake()
     {
         playerControls = new IA_PlayerControls();
@@ -54,6 +46,10 @@ public class SC_PlayerShooting : MonoBehaviour
 
     void Shoot()
     {
+        SC_PlayerStats PlayerStats = PB_Player.GetComponent<SC_PlayerStats>();
+        shootCooldown = PlayerStats.shootCooldown;
+        bulletAmount = PlayerStats.bulletAmount;
+
         shootCone = bulletAmount * 15;
         float startAngle = -shootCone / 2;
         int intervals = bulletAmount - 1;

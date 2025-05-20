@@ -8,8 +8,8 @@ public class SC_Player : MonoBehaviour
     public GameObject PB_Player;
     public GameObject PB_HealthBar;
 
-    private float maxHealth;
-    private float currentHealth;
+    public float maxHealth;
+    public float currentHealth;
 
     private void Start()
     {
@@ -30,14 +30,11 @@ public class SC_Player : MonoBehaviour
         {
             Debug.Log("Kill Player Not Implemented");
         }
-
     }
 
-    private void Update()
+    public void UpdateHealth(float currentHealth)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            TakeDamage(0.5f);
-        }
+        SC_HealthBar HealthBar = PB_HealthBar.GetComponent<SC_HealthBar>();
+        HealthBar.SetHealth(currentHealth);
     }
 }
