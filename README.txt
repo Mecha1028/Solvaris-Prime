@@ -11,4 +11,14 @@ WASD - Move
 Mouse - Aim
 LMB - Shoot
 
+
+
+
+Checklist
+- All project and source files
+- READ ME with all requirements
+- GDD included in project files with corresponding file name
+- Checklist
+
+Version Number: 2022.3.39f1
 GitHub Link: https://github.com/Mecha1028/Solvaris-Prime
